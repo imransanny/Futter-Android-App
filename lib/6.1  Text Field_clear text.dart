@@ -40,14 +40,31 @@ class _HomeState extends State<Home> {
             padding: EdgeInsets.all(16),
             child: Column(
               children: [
-
-                SizedBox(height: 20,),
-
+                SizedBox(
+                  height: 20,
+                ),
                 TextField(
+
+
+
+
+                  controller: _descriptionTEController,
+
+
+                 // textAlign: TextAlign.end,
+
                   maxLines: 4,
                   maxLength: 200,
                   decoration: InputDecoration(
-                    label: Text('Name'),
+                    label: Text(
+                      'Name',
+                    ),
+                    //level name likhata ekta fixed jaigai thakbe
+                    floatingLabelBehavior: FloatingLabelBehavior.always,
+
+
+                    //label: Text('Name',),
+
                     labelStyle: TextStyle(
                       fontSize: 30,
                       color: Colors.green,
@@ -75,21 +92,24 @@ class _HomeState extends State<Home> {
                     print('value');
                   },
                 ),
+                TextButton(
+                  onPressed: () {
+                    _descriptionTEController.clear();
+                   _descriptionTEController.text = 'I want to change text';
+                  },
+                  // child: ElevatedButton(
+                  //   onPressed: () {},
+                  //   child: Text(
+                  //     'Button',
+                  //   ),
+                  // ),
 
-                TextButton(onPressed: (){
-                  _descriptionTEController.clear();
-                  _descriptionTEController.text = 'I want to change text';
-                }, child: ElevatedButton(
-                  onPressed: () {  },
-                  child: Text('Button',),
+
+                  child: Text('btn'),
                 ),
-
-                ),
-
                 SizedBox(
                   height: 20,
                 ),
-
               ],
             )));
   }
