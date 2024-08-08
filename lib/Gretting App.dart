@@ -53,7 +53,7 @@ class Welcome_page_1 extends StatelessWidget {
               Image.asset(
                 'assets/image/Bangladesh_image.png',
                 height: 200,
-                width: 250,
+                width: 170,
                 fit: BoxFit.cover,
               ),
               SizedBox(
